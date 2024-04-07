@@ -15,7 +15,7 @@ public class Challenge {
 		Course pymc = new Course("PYC", "Python Masterclass");
 		String students = Stream
 				.generate(() -> Student.getRandomStudent(jmc, pymc))
-				.limit(2)
+				.limit(1000)
 				.map(Student::toJSON)
 				.collect(Collectors.joining(",", "[", "]"));
 		System.out.println(students);
