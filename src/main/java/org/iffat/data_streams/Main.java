@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Player implements Serializable {
+	private final static long serialVersionUID = 1L;
 	private String name;
 	private int topScore;
 	private List<String> collectedWeapons = new ArrayList<>();
@@ -39,7 +40,7 @@ public class Main {
 		System.out.println(tim);
 
 		Path timFile = Path.of("tim.dat");
-		writeObject(timFile, tim);
+		//writeObject(timFile, tim);
 		Player reconstitutedTim = readObject(timFile);
 		System.out.println(reconstitutedTim);
 	}
